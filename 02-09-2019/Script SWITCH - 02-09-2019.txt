@@ -1,0 +1,21 @@
+enable
+configure terminal
+hostname SW-03
+banner motd "ACESSO AUTORIZADO APENAS PARA O DEPARTAMENTO DE TI!"
+enable secret SenhaEnable
+line console 0
+password SenhadaConsole
+login
+exit
+service password-encryption
+line vty 0 15
+password SenhadaVTY
+login
+exit
+interface vlan 1
+ip address 10.0.63.254 255.255.192.0
+description INTERFACE DE GERENCIAMENTO
+no shutdown
+exit
+ip default-gateway 10.0.0.1
+do wr

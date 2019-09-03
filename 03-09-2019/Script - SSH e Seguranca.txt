@@ -1,0 +1,13 @@
+enable
+configure terminal
+ip domain-name senai.local
+username lucasjorge privilege 15 secret Batata
+username estagiario privilege 1 secret Muuu
+login block-for 60 attempts 3 within 60
+security passwords min-length 8
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+do wr

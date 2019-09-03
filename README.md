@@ -1,2 +1,2 @@
 # Script SENAI Tarde
-Esse repositório tem por objetivo fornecer os Scripts utilizados em sala de aula.
+Scripts para a turma da TARDE do Curso Técnico de Redes de Computadores
